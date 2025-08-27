@@ -68,7 +68,7 @@ numeric_cols = [c for c in features if c not in discrete_cols]
 # ----------------------------
 st.title("Magnesium Hydride Hydrogen Storage Density Prediction")
 
-st.caption("目标：预测 **Hydrogen storage density(%)**")
+st.caption("Goal: Predict **Hydrogen storage density(%)**")
 
 inputs = {}
 
@@ -107,7 +107,7 @@ for col in discrete_cols:
                     pass
         default_idx = options.index(default_val)
         inputs[col] = st.selectbox(col, options=options, index=default_idx)
-        st.caption("Number of cycles 仅可选择 1 或 2。")
+        st.caption("Number of cycles can only be selected as 1 or 2.")
     else:
         # 其余离散列：从数据集中提取并排序
         options = pd.Series(df[col].dropna().unique()).tolist()
