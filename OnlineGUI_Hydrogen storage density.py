@@ -10,7 +10,7 @@ st.set_page_config(page_title="Hydrogen Storage Density Predictor", layout="cent
 # ----------------------------
 # 加载模型与数据
 # ----------------------------
-model = joblib.load('CatBoost.pkl')
+model = joblib.load('NGboost.pkl')
 
 # 你上传的数据集路径（若与实际不符可改为本地相对路径）
 data_path = '/mnt/data/储氢密度.xlsx'
