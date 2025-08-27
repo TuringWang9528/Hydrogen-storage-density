@@ -12,9 +12,7 @@ st.set_page_config(page_title="Hydrogen Storage Density Predictor", layout="cent
 # ----------------------------
 model = joblib.load('NGboost.pkl')
 
-# 你上传的数据集路径（若与实际不符可改为本地相对路径）
-data_path = '/mnt/data/储氢密度.xlsx'
-df = pd.read_excel(data_path, engine='openpyxl')
+df = pd.read_excel('储氢密度.xlsx', engine='openpyxl')
 
 # ----------------------------
 # 目标列与候选特征列
